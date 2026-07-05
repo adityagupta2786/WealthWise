@@ -430,6 +430,13 @@ async function loadProfile(){
         if(result.success){
 
             const profile = result.profile;
+            const initials = profile.fullname
+    .split(" ")
+    .map(word => word.charAt(0))
+    .join("")
+    .toUpperCase();
+
+document.getElementById("profileAvatar").innerText = initials;
             console.log(profile);
             console.log(
     profile.monthly_income,
