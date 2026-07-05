@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Banker Dashboard | WealthWise</title>
+
+    <link rel="stylesheet" href="banker.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-building-columns"></i>
+        <h2>WealthWise</h2>
+    </div>
+
+    <ul>
+
+        <li class="active" data-page="overview">
+            <i class="fa-solid fa-chart-pie"></i>
+            Overview
+        </li>
+
+        <li data-page="customers">
+            <i class="fa-solid fa-users"></i>
+            Customer List
+        </li>
+
+        <li data-page="profile">
+            <i class="fa-solid fa-user"></i>
+            Customer Profile
+        </li>
+
+        <li data-page="insights">
+            <i class="fa-solid fa-brain"></i>
+            AI Insights
+        </li>
+
+        <li data-page="recommendations">
+            <i class="fa-solid fa-lightbulb"></i>
+            Recommendations
+        </li>
+
+        <li data-page="reports">
+            <i class="fa-solid fa-file-lines"></i>
+            Reports
+        </li>
+
+        <li onclick="window.location='index.html'">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<div class="topbar">
+
+<h2>Relationship Manager Dashboard</h2>
+
+<div class="top-right">
+
+<i class="fa-solid fa-bell"></i>
+
+<img src="https://i.pravatar.cc/100?img=12" alt="profile">
+
+</div>
+
+</div>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section id="overview" class="page active-page">
+
+<h1>Overview</h1>
+
+<div class="stats">
+
+<div class="stat-card">
+<i class="fa-solid fa-users"></i>
+<h3>Total Customers</h3>
+<h2>1,250</h2>
+</div>
+
+<div class="stat-card">
+<i class="fa-solid fa-triangle-exclamation"></i>
+<h3>High Risk</h3>
+<h2>48</h2>
+</div>
+
+<div class="stat-card">
+<i class="fa-solid fa-piggy-bank"></i>
+<h3>Total Deposits</h3>
+<h2>₹8.2 Cr</h2>
+</div>
+
+<div class="stat-card">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Loan Approvals</h3>
+<h2>92%</h2>
+</div>
+
+</div>
+
+<div class="charts">
+
+<div class="chart-card">
+
+<h3>Monthly Customers</h3>
+
+<canvas id="customerChart"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h3>Risk Distribution</h3>
+
+<canvas id="riskChart"></canvas>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CUSTOMER LIST ================= -->
+
+<section id="customers" class="page">
+
+<h1>Customer List</h1>
+
+<table>
+
+<tr>
+
+<th>Name</th>
+<th>Financial Score</th>
+<th>Risk</th>
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>Rahul Sharma</td>
+<td>90</td>
+<td>Low</td>
+<td>Active</td>
+
+</tr>
+
+<tr>
+
+<td>Priya Singh</td>
+<td>76</td>
+<td>Medium</td>
+<td>Active</td>
+
+</tr>
+
+<tr>
+
+<td>Amit Kumar</td>
+<td>61</td>
+<td>High</td>
+<td>Needs Attention</td>
+
+</tr>
+
+<tr>
+
+<td>Sneha Das</td>
+<td>84</td>
+<td>Low</td>
+<td>Active</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- ================= CUSTOMER PROFILE ================= -->
+
+<section id="profile" class="page">
+
+<h1>Customer Profile</h1>
+
+<div class="profile-card">
+
+<p><strong>Name :</strong> Rahul Sharma</p>
+
+<p><strong>Age :</strong> 32</p>
+
+<p><strong>Occupation :</strong> Software Engineer</p>
+
+<p><strong>Annual Income :</strong> ₹12,00,000</p>
+
+<p><strong>Financial Health :</strong> 90/100</p>
+
+<p><strong>Loan Status :</strong> Eligible</p>
+
+</div>
+
+</section>
+
+<!-- ================= AI INSIGHTS ================= -->
+
+<section id="insights" class="page">
+
+<h1>AI Insights</h1>
+
+<div class="grid">
+
+<div class="info-card">
+<h3>Spending Pattern</h3>
+<p>Customer spends 18% on lifestyle and saves consistently.</p>
+</div>
+
+<div class="info-card">
+<h3>Risk Analysis</h3>
+<p>Low default probability. Stable financial behaviour.</p>
+</div>
+
+<div class="info-card">
+<h3>Opportunity</h3>
+<p>Eligible for premium savings account and investment products.</p>
+</div>
+
+<div class="info-card">
+<h3>Retention</h3>
+<p>High likelihood of remaining a long-term customer.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RECOMMENDATIONS ================= -->
+
+<section id="recommendations" class="page">
+
+<h1>Recommendations</h1>
+
+<div class="grid">
+
+<div class="info-card">
+<h3>Mutual Fund</h3>
+<p>Balanced Equity Fund</p>
+</div>
+
+<div class="info-card">
+<h3>Insurance</h3>
+<p>Family Health Plan</p>
+</div>
+
+<div class="info-card">
+<h3>Fixed Deposit</h3>
+<p>7.25% Annual Interest</p>
+</div>
+
+<div class="info-card">
+<h3>Credit Card</h3>
+<p>Travel Rewards Card</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= REPORTS ================= -->
+
+<section id="reports" class="page">
+
+<h1>Reports</h1>
+
+<div class="grid">
+
+<div class="info-card">
+<h3>Monthly Report</h3>
+<button>Download PDF</button>
+</div>
+
+<div class="info-card">
+<h3>Customer Analytics</h3>
+<button>Export CSV</button>
+</div>
+
+<div class="info-card">
+<h3>Loan Report</h3>
+<button>Download</button>
+</div>
+
+<div class="info-card">
+<h3>Investment Report</h3>
+<button>Download</button>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="banker.js"></script>
+
+</body>
+
+</html>

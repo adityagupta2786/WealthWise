@@ -1,0 +1,332 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+    width:100%;
+    max-width:900px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.profile-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    color:white;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.profile-card h1{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-size:34px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#cbd5e1;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.profile-card h2{
+
+    margin-top:30px;
+    margin-bottom:15px;
+
+    color:#60a5fa;
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+   INPUT GROUP
+========================================== */
+
+.input-group{
+
+    display:flex;
+    flex-direction:column;
+
+    margin-bottom:18px;
+
+}
+
+.input-group label{
+
+    margin-bottom:8px;
+
+    font-weight:500;
+
+}
+
+.input-group input{
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:#f8fafc;
+
+}
+
+/* ==========================================
+   SELECT
+========================================== */
+
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    font-size:15px;
+
+    background:white;
+
+}
+
+/* ==========================================
+   RADIO
+========================================== */
+
+.radio-group{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-bottom:20px;
+
+}
+
+.radio-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+/* ==========================================
+   CHECKBOX
+========================================== */
+
+.checkbox-group{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.checkbox-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    background:#2563eb;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   READ ONLY
+========================================== */
+
+input[readonly]{
+
+    background:#dbeafe;
+
+    cursor:not-allowed;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.profile-card{
+
+padding:25px;
+
+}
+
+.profile-card h1{
+
+font-size:28px;
+
+}
+
+.radio-group{
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.checkbox-group{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:480px){
+
+body{
+
+padding:20px 12px;
+
+}
+
+.profile-card{
+
+padding:20px;
+
+}
+
+.profile-card h1{
+
+font-size:24px;
+
+}
+
+button{
+
+font-size:16px;
+
+padding:14px;
+
+}
+
+}
+.required{
+    color:#ef4444;
+    font-weight:700;
+    margin-left:3px;
+}
+.required-note{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:25px;
+    font-size:14px;
+}

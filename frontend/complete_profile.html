@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complete Profile | WealthWise</title>
+
+    <link rel="stylesheet" href="complete_profile.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="profile-card">
+
+<h1>Complete Your Financial Profile</h1>
+
+<p class="subtitle">
+Help us personalize your banking experience.
+</p>
+<p class="required-note">
+    <span class="required">*</span> indicates required fields.
+</p>
+
+<form id="profileForm">
+
+<!-- ================= Personal Information ================= -->
+
+<h2>Personal Information</h2>
+
+<div class="input-group">
+
+<label>Full Name<span class="required">*</span></label>
+
+<input
+type="text"
+id="fullname"
+readonly>
+
+</div>
+
+<div class="input-group">
+
+<label>Email<span class="required">*</span></label>
+
+<input
+type="email"
+id="email"
+readonly>
+
+</div>
+
+<div class="input-group">
+
+<label>Phone<span class="required">*</span></label>
+
+<input
+type="text"
+id="phone"
+readonly>
+
+</div>
+
+<div class="input-group">
+
+<label>Age<span class="required">*</span></label>
+
+<input
+type="number"
+id="age"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>Occupation<span class="required">*</span></label>
+
+<input
+type="text"
+id="occupation"
+placeholder="Student / Employee / Business"
+required>
+
+</div>
+
+<!-- ================= Financial Information ================= -->
+
+<h2>Financial Information</h2>
+
+<div class="input-group">
+
+<label>Monthly Income<span class="required">*</span></label>
+
+<input
+type="number"
+id="income"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>Monthly Expenses<span class="required">*</span></label>
+
+<input
+type="number"
+id="expenses"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>Current Savings<span class="required">*</span></label>
+
+<input
+type="number"
+id="savings"
+required>
+
+</div>
+
+<!-- ================= Goal ================= -->
+
+<h2>
+    Financial Goal
+    <span class="required">*</span>
+</h2>
+
+<select id="goal">
+
+<option>Emergency Fund</option>
+
+<option>Buy a House</option>
+
+<option>Buy a Car</option>
+
+<option>Higher Education</option>
+
+<option>Retirement</option>
+
+<option>Business</option>
+
+</select>
+
+<!-- ================= Risk ================= -->
+
+<h2>
+    Risk Appetite
+    <span class="required">*</span>
+</h2>
+
+<div class="radio-group">
+
+<label>
+
+<input
+type="radio"
+name="risk"
+value="Low"
+checked>
+
+Low
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="risk"
+value="Moderate">
+
+Moderate
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="risk"
+value="High">
+
+High
+
+</label>
+
+</div>
+
+<!-- ================= Investment ================= -->
+
+<label>Investment Experience <span class="required">*</span></label>
+
+<select id="experience">
+
+<option>Beginner</option>
+
+<option>Intermediate</option>
+
+<option>Advanced</option>
+
+</select>
+
+<!-- ================= Loan ================= -->
+
+<h2>Existing Loan</h2>
+
+<select id="loan">
+
+<option>None</option>
+
+<option>Home Loan</option>
+
+<option>Car Loan</option>
+
+<option>Education Loan</option>
+
+<option>Personal Loan</option>
+
+</select>
+
+<!-- ================= Investments ================= -->
+
+<h2>Current Investments</h2>
+
+<div class="checkbox-group">
+
+<label>
+
+<input type="checkbox" value="FD">
+
+Fixed Deposit
+
+</label>
+
+<label>
+
+<input type="checkbox" value="SIP">
+
+SIP
+
+</label>
+
+<label>
+
+<input type="checkbox" value="Mutual Fund">
+
+Mutual Fund
+
+</label>
+
+<label>
+
+<input type="checkbox" value="Stocks">
+
+Stocks
+
+</label>
+
+<label>
+
+<input type="checkbox" value="PPF">
+
+PPF
+
+</label>
+
+<label>
+
+<input type="checkbox" value="NPS">
+
+NPS
+
+</label>
+
+</div>
+
+<button type="submit">
+
+Save & Continue
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="complete_profile.js"></script>
+
+</body>
+
+</html>

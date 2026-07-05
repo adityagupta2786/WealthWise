@@ -1,0 +1,658 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow:hidden;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ==========================================
+   LEFT PANEL
+========================================== */
+
+.left-panel{
+    width:45%;
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+}
+
+.overlay{
+    max-width:450px;
+}
+
+.overlay h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.overlay h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    color:#dbeafe;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.features{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.features div{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:18px;
+}
+
+.features i{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+}
+
+/* ==========================================
+   RIGHT PANEL
+========================================== */
+
+.right-panel{
+    width:55%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0f172a;
+    padding:40px;
+}
+
+/* ==========================================
+   SIGNUP CARD
+========================================== */
+
+.signup-card{
+
+    width:100%;
+    max-width:480px;
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.signup-card h2{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.signup-card p{
+
+    color:#cbd5e1;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+   INPUT BOX
+========================================== */
+
+.input-box{
+
+    display:flex;
+    align-items:center;
+    background:#334155;
+    padding:16px;
+    border-radius:12px;
+    margin-bottom:20px;
+
+    border:1px solid transparent;
+
+    transition:.3s;
+
+}
+
+.input-box:hover,
+.input-box:focus-within{
+
+    border-color:#3b82f6;
+    box-shadow:0 0 12px rgba(59,130,246,.25);
+
+}
+
+.input-box i{
+
+    color:#3b82f6;
+
+    margin-right:15px;
+
+    font-size:18px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.input-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/* ==========================================
+   CHECKBOX
+========================================== */
+
+.checkbox{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+}
+
+.checkbox input{
+
+    margin-top:3px;
+
+    accent-color:#3b82f6;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.signup-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.signup-btn:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(59,130,246,.35);
+
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+.bottom-links{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.bottom-links p{
+
+    margin-bottom:15px;
+
+}
+
+.bottom-links a{
+
+    color:#60a5fa;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+}
+
+.bottom-links a:hover{
+
+    text-decoration:underline;
+
+}
+
+.home-link{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.signup-card{
+
+    animation:slideUp .8s ease;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .container{
+
+        flex-direction:column;
+
+    }
+
+    .left-panel{
+
+        width:100%;
+        min-height:300px;
+        text-align:center;
+
+    }
+
+    .features{
+
+        align-items:center;
+
+    }
+
+    .right-panel{
+
+        width:100%;
+        padding:30px 20px;
+
+    }
+
+    body{
+
+        overflow:auto;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .signup-card{
+
+        padding:30px 20px;
+
+    }
+
+    .overlay h1{
+
+        font-size:38px;
+
+    }
+
+    .overlay h2{
+
+        font-size:26px;
+
+    }
+
+    .features div{
+
+        font-size:16px;
+
+    }
+}
+.toggle-password{
+
+    cursor:pointer;
+
+    color:#94a3b8;
+
+    margin-left:10px;
+
+    transition:.3s;
+
+}
+
+.toggle-password:hover{
+
+    color:#3b82f6;
+
+}
+/* =====================================
+   SUCCESS MODAL
+====================================== */
+
+.success-modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(8px);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:9999;
+
+}
+
+.success-modal.show{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+.success-box{
+
+    width:420px;
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    animation:popup .5s;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+.success-icon{
+
+    font-size:70px;
+
+    color:#22c55e;
+
+    margin-bottom:20px;
+
+}
+
+.success-box h2{
+
+    margin-bottom:15px;
+
+}
+
+.success-box p{
+
+    color:#cbd5e1;
+
+    margin-bottom:25px;
+
+    line-height:1.7;
+
+}
+
+.loader{
+
+    width:45px;
+    height:45px;
+
+    border:4px solid #334155;
+
+    border-top:4px solid #3b82f6;
+
+    border-radius:50%;
+
+    margin:20px auto;
+
+    animation:spin 1s linear infinite;
+
+}
+
+.redirect-text{
+
+    color:#94a3b8;
+
+}
+
+#loginNow{
+
+    margin-top:20px;
+
+    padding:14px 35px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+#loginNow:hover{
+
+    background:#2563eb;
+
+}
+
+@keyframes spin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+/* ===================================
+   TOAST NOTIFICATION
+=================================== */
+
+.toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:-400px;
+
+    min-width:320px;
+
+    background:#1e293b;
+
+    color:white;
+
+    padding:18px 22px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    transition:.45s;
+
+    z-index:10000;
+
+}
+
+.toast.show{
+
+    right:25px;
+
+}
+
+.toast i{
+
+    font-size:22px;
+
+}
+
+.toast.success{
+
+    border-left:5px solid #22c55e;
+
+}
+
+.toast.success i{
+
+    color:#22c55e;
+
+}
+
+.toast.error{
+
+    border-left:5px solid #ef4444;
+
+}
+
+.toast.error i{
+
+    color:#ef4444;
+
+}
+
+.toast.warning{
+
+    border-left:5px solid #f59e0b;
+
+}
+
+.toast.warning i{
+
+    color:#f59e0b;
+
+}

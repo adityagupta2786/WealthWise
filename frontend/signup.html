@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | WealthWise</title>
+
+    <link rel="stylesheet" href="signup.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Left Side -->
+
+    <div class="left-panel">
+
+        <div class="overlay">
+
+            <h1>WealthWise</h1>
+
+            <h2>Create Your Financial Future</h2>
+
+            <p>
+
+                Join WealthWise and experience AI-powered banking,
+                smart financial planning, and personalized insights.
+
+            </p>
+
+            <div class="features">
+
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    Financial Health Score
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    AI Financial Assistant
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-bullseye"></i>
+                    Goal Tracking
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-chart-pie"></i>
+                    Future Prediction
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="right-panel">
+
+        <div class="signup-card">
+
+            <h2>Create Account</h2>
+
+            <p>Start your financial journey today.</p>
+
+            <form id="signupForm">
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <input
+                    type="text"
+                    id="fullname"
+                    placeholder="Full Name">
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address">
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number">
+
+                </div>
+
+                <div class="input-box">
+
+    <i class="fa-solid fa-lock"></i>
+
+    <input
+    type="password"
+    id="password"
+    placeholder="Password">
+
+    <i class="fa-solid fa-eye toggle-password"
+       data-target="password"></i>
+
+</div>
+
+                <div class="input-box">
+
+    <i class="fa-solid fa-lock"></i>
+
+    <input
+    type="password"
+    id="confirmPassword"
+    placeholder="Confirm Password">
+
+    <i class="fa-solid fa-eye toggle-password"
+       data-target="confirmPassword"></i>
+
+</div>
+
+                <div class="checkbox">
+
+                    <input
+                    type="checkbox"
+                    id="terms">
+
+                    <label for="terms">
+
+                        I agree to the Terms & Conditions
+
+                    </label>
+
+                </div>
+
+                <button
+                type="submit"
+                class="signup-btn">
+
+                Create Account
+
+                </button>
+
+            </form>
+
+            <div class="bottom-links">
+
+                <p>
+
+                    Already have an account?
+
+                    <a href="login.html">
+
+                        Login
+
+                    </a>
+
+                </p>
+
+                <a
+                href="index.html"
+                class="home-link">
+
+                ← Back to Home
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =====================================
+     SUCCESS MODAL
+====================================== -->
+
+<div id="successModal" class="success-modal">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Account Created!</h2>
+
+        <p>
+            Welcome to <strong>WealthWise</strong>.
+            <br>
+            Your account has been created successfully.
+        </p>
+
+        <div class="loader"></div>
+
+        <p class="redirect-text">
+
+            Redirecting to Login...
+
+        </p>
+
+        <button id="loginNow">
+
+            Login Now
+
+        </button>
+
+    </div>
+
+</div>
+<!-- Toast Notification -->
+<div id="toast" class="toast">
+    <i id="toastIcon" class="fa-solid fa-circle-info"></i>
+    <span id="toastMessage"></span>
+</div>
+
+<script src="signup.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Dashboard | WealthWise</title>
+
+    <link rel="stylesheet" href="customer.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-wallet"></i>
+        <h2>WealthWise</h2>
+    </div>
+
+    <ul>
+
+        <li class="active" data-page="home">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </li>
+
+        <li data-page="health">
+            <i class="fa-solid fa-heart-pulse"></i>
+            Financial Health
+        </li>
+
+        <li data-page="prediction">
+            <i class="fa-solid fa-chart-line"></i>
+            Future Prediction
+        </li>
+
+        <li data-page="assistant">
+            <i class="fa-solid fa-robot"></i>
+            AI Assistant
+        </li>
+
+        <li data-page="goals">
+            <i class="fa-solid fa-bullseye"></i>
+            Goals
+        </li>
+
+        <li data-page="profile">
+            <i class="fa-solid fa-user"></i>
+            Profile
+        </li>
+
+        <li data-page="settings">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </li>
+
+        <li onclick="window.location='index.html'">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<!-- ================= TOPBAR ================= -->
+
+<div class="topbar">
+
+<h2 id="welcomeText">Welcome Back 👋</h2>
+
+<div class="top-right">
+
+<i class="fa-solid fa-bell"></i>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/100" alt="profile">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="page active-page">
+
+<h1>Dashboard Overview</h1>
+
+<div class="stats">
+
+<div class="stat-card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h3>Total Balance</h3>
+
+<h2 id="dashboardBalance">₹0</h2>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-arrow-trend-up"></i>
+
+<h3>Income</h3>
+
+<h2 id="dashboardIncome">₹0</h2>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-arrow-trend-down"></i>
+
+<h3>Expenses</h3>
+
+<h2 id="dashboardExpenses">₹0</h2>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-piggy-bank"></i>
+
+<h3>MonthlySavings</h3>
+<h2 id="dashboardSavings">₹0</h2>
+
+</div>
+
+</div>
+
+<!-- Charts -->
+
+<div class="charts">
+
+<div class="chart-card">
+
+<h3>Income vs Expenses</h3>
+
+<canvas id="incomeChart"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h3>Monthly Spending</h3>
+
+<canvas id="pieChart"></canvas>
+
+</div>
+
+</div>
+
+<!-- Transactions -->
+
+<div class="transactions">
+
+<h2>Recent Transactions</h2>
+
+<table>
+
+<tr>
+
+<th>Date</th>
+
+<th>Title</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>01 Jul</td>
+
+<td>Amazon</td>
+
+<td>-₹2,500</td>
+
+<td>Completed</td>
+
+</tr>
+
+<tr>
+
+<td>02 Jul</td>
+
+<td>Salary Credited</td>
+
+<td id="salaryTransaction">+₹0</td>
+
+<td>Received</td>
+
+</tr>
+
+<tr>
+
+<td>03 Jul</td>
+
+<td>Electricity</td>
+
+<td>-₹1,450</td>
+
+<td>Paid</td>
+
+</tr>
+
+<tr>
+
+<td>04 Jul</td>
+
+<td>Netflix</td>
+
+<td>-₹649</td>
+
+<td>Paid</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- ================= FINANCIAL HEALTH ================= -->
+
+<section id="health" class="page">
+
+<h1>Financial Health</h1>
+
+<div class="health-box">
+
+<div class="circle-score">
+
+87%
+
+</div>
+
+<div class="health-info">
+
+<h2>Excellent Financial Health</h2>
+
+<p>Income is stable.</p>
+
+<p>Emergency Fund Available.</p>
+
+<p>Low Debt Ratio.</p>
+
+<p>Good Saving Habit.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FUTURE PREDICTION ================= -->
+
+<section id="prediction" class="page">
+
+<h1>Future Prediction</h1>
+
+<div class="prediction-grid">
+
+<div class="predict-card">
+
+<h3>Expected Savings</h3>
+
+<h2>₹35,000</h2>
+
+</div>
+
+<div class="predict-card">
+
+<h3>Loan Eligibility</h3>
+
+<h2>Excellent</h2>
+
+</div>
+
+<div class="predict-card">
+
+<h3>Expense Forecast</h3>
+
+<h2>₹24,000</h2>
+
+</div>
+
+<div class="predict-card">
+
+<h3>Risk Level</h3>
+
+<h2>Low</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= AI ASSISTANT ================= -->
+
+<section id="assistant" class="page">
+
+<h1>AI Assistant</h1>
+
+<div class="chat-box">
+
+<div class="messages" id="messages">
+
+<div class="bot" id="botGreeting">
+
+👋 Hello! Ask me anything about your finances.
+
+</div>
+</div>
+
+<div class="chat-input">
+
+<input
+type="text"
+id="userInput"
+placeholder="Ask something...">
+
+<button id="sendBtn">
+
+Send
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GOALS ================= -->
+
+<section id="goals" class="page">
+
+<h1>Goals</h1>
+
+<div class="goal">
+
+<h3>Emergency Fund</h3>
+
+<div class="progress">
+
+<div class="fill eighty"></div>
+
+</div>
+
+<p>₹80,000 / ₹1,00,000</p>
+
+</div>
+
+<div class="goal">
+
+<h3>Vacation</h3>
+
+<div class="progress">
+
+<div class="fill sixty"></div>
+
+</div>
+
+<p>55% Completed</p>
+
+</div>
+
+<div class="goal">
+
+<h3>New Bike</h3>
+
+<div class="progress">
+
+<div class="fill seventy"></div>
+
+</div>
+
+<p>70% Completed</p>
+
+</div>
+
+</section>
+
+<!-- ================= PROFILE ================= -->
+
+<section id="profile" class="page">
+
+<h1>Profile</h1>
+
+<div class="profile-card">
+
+<p><strong>Name :</strong> <span id="profileName"></span></p>
+
+<p><strong>Email :</strong> <span id="profileEmail"></span></p>
+
+<p><strong>Phone :</strong> <span id="profilePhone"></span></p>
+
+<p><strong>Occupation :</strong> <span id="profileOccupation"></span></p>
+
+<p><strong>Monthly Income :</strong> ₹<span id="profileIncome"></span></p>
+
+<p><strong>Monthly Expenses :</strong> ₹<span id="profileExpenses"></span></p>
+
+<p><strong>Current Savings :</strong> ₹<span id="profileSavings"></span></p>
+
+<p><strong>Financial Goal :</strong> <span id="profileGoal"></span></p>
+
+<p><strong>Risk Appetite :</strong> <span id="profileRisk"></span></p>
+</div>
+
+</section>
+
+<!-- ================= SETTINGS ================= -->
+
+<section id="settings" class="page">
+
+<h1>Settings</h1>
+
+<div class="setting">
+
+<label>Dark Mode</label>
+
+<input type="checkbox" checked>
+
+</div>
+
+<div class="setting">
+
+<label>Notifications</label>
+
+<input type="checkbox" checked>
+
+</div>
+
+<div class="setting">
+
+<label>Language</label>
+
+<select>
+
+<option>English</option>
+
+<option>Hindi</option>
+
+<option>Odia</option>
+
+</select>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="customer.js"></script>
+
+</body>
+
+</html>
